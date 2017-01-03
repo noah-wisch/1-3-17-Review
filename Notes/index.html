@@ -3,14 +3,40 @@
 <html>
 
 <head>
-    <title>Starter Pack</title>
+    <title>Books A Million</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script src="app.js"></script>
+
+    <script type="x-mustache-template" id="product-template">
+        <h2>{{bookName}}</h2>
+        <p class="author">by {{authorName}}</p>
+        <p class="price">Starting from ${{price}}</p>
+        <p class="cover"><img src="{{cover}}"/ ></p>
+        <button>Add to cart</button>
+    </script>
+
+<script type="x-mustache-template" id="cart-template">
+        <p>{{bookName}}: ${{price}}</p>
+
+    </script>
 </head>
 
 <body>
-    <h1>Start Here</h1>
+    <h1>Books A Million</h1>
+    <main>
+        <section id="products">
+            <ul></ul>
+        </section>
+
+        <section id="cart">
+            <h2>Cart</h2>
+            <p>Subtotal: $<span id="cart-subtotal">0.00</span></p>
+            <p>Tax: $<span id="cart-tax">0.00</span></p>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <ul></ul>
+        </section>
+    </main>
 </body>
 
 </html>
